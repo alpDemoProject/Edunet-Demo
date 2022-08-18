@@ -38,14 +38,36 @@ video {
 }
 
 /* HEADER */
-#header .title-row {
-  border-top: 1px solid var(--grey);
+#header .up-bar-row {
+  display: flex;
+  align-items: center;
+}
+
+#header .up-bar-row .icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  width: 1rem;
+  height: 1rem;
+}
+
+#header .up-bar-row .login-icon {
+  background-image: url(../Images/login.jpeg);
+}
+
+#header .up-bar-col {
+  padding: 0.1rem 1.1rem;
+}
+
+#header .up-bar-col a {
+  color: black;
+  font-weight: bold;
+  font-size: 0.6rem;
 }
 
 @media only screen and (min-width: 481px) {
   #header .up-bar-row {
-    display: flex;
-    align-items: center;
     justify-content: flex-end;
 
     max-width: 92%;
@@ -53,27 +75,11 @@ video {
   }
 
   #header .up-bar-col {
-    padding: 0.1rem 1.1rem;
-    border-left: 1px solid grey;
+    border-left: 1px solid var(--grey);
   }
 
-  #header .up-bar-row .icon {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    width: 1rem;
-    height: 1rem;
-  }
-
-  #header .up-bar-row .login-icon {
-    background-image: url(../Images/login.jpeg);
-  }
-
-  #header .up-bar-col a {
-    color: black;
-    font-weight: bold;
-    font-size: 0.6rem;
+  #header .up-bar-col:last-child {
+    border-right: 1px solid var(--grey);
   }
 
   #header .up-bar-row .icon {
@@ -83,58 +89,131 @@ video {
     border: 1px solid black;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  #header .up-bar-row {
+    justify-content: space-evenly;
+  }
+
+  #header .up-bar-col {
+    border-right: 1px solid var(--grey);
+    border-left: 1px solid var(--grey);
+  }
+}
 /* ===================== */
+#header .title-row {
+  background-image: url(../Images/bg1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  border-top: 1px solid var(--grey);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+
+  padding: 1rem 0;
+}
+
+#header .title-row h1 {
+  color: var(--primary-color);
+  margin: 0;
+  font-weight: 300;
+}
+
+#header .title-row h2 {
+  color: var(--secondary-color);
+  font-weight: 300;
+  padding-left: 0.8rem;
+}
+
+#header .title-row::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.9;
+  background-color: #fff;
+}
+
+#header .title-row * {
+  z-index: 1;
+}
+
+#header .title-row .logo-col {
+  background-image: url(../Images/logo.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 @media only screen and (min-width: 769px) {
-  #header .title-row {
-    background-image: url(../Images/bg1.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-
-    padding: 20px 0;
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-
-  #header .title-row::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    opacity: 0.9;
-    background-color: #fff;
-  }
-
-  #header .title-row * {
-    z-index: 1;
-  }
-
   #header .title-row .logo-col {
-    background-image: url(../Images/logo.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
     width: 8rem;
     height: 8rem;
   }
 
   #header .title-row h1 {
     font-size: 3.5rem;
-    margin: 0;
-    font-weight: 300;
-    line-height: 2.7rem;
   }
 
   #header .title-row h2 {
     font-size: 1.8rem;
-    font-weight: 300;
-    line-height: 2.7rem;
-    padding-left: 1rem;
     letter-spacing: 0.4rem;
+  }
+
+  #header .title-row h1,
+  #header .title-row h2 {
+    line-height: 2.7rem;
+  }
+}
+
+@media only screen and (min-width: 481) {
+  #header .title-row .logo-col {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  #header .title-row h1 {
+    font-size: 1.7rem;
+  }
+
+  #header .title-row h2 {
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+  }
+
+  #header .title-row h1,
+  #header .title-row h2 {
+    line-height: 1.1rem;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  #header .title-row {
+    padding: 0.5rem 0;
+  }
+
+  #header .title-row .logo-col {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  #header .title-row h1 {
+    font-size: 1.2rem;
+  }
+
+  #header .title-row h2 {
+    font-size: 0.5rem;
+    letter-spacing: 0.2rem;
+  }
+
+  #header .title-row h1,
+  #header .title-row h2 {
+    line-height: 0.9rem;
   }
 }
