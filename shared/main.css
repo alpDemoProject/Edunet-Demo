@@ -1,1 +1,140 @@
 /* CSS FILE */
+/* BASE */
+:root {
+  --primary-color: #1b3b51;
+  --secondary-color: #cd9402;
+  --grey: #ccc;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+img,
+video {
+  width: 100%;
+}
+
+/* UTILS */
+.font-merri {
+  font-family: "Merriweather", sans-serif;
+}
+
+.font-funny {
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+/* HEADER */
+#header .title-row {
+  border-top: 1px solid var(--grey);
+}
+
+@media only screen and (min-width: 481px) {
+  #header .up-bar-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    max-width: 92%;
+    margin: 0 auto;
+  }
+
+  #header .up-bar-col {
+    padding: 0.1rem 1.1rem;
+    border-left: 1px solid grey;
+  }
+
+  #header .up-bar-row .icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 1rem;
+    height: 1rem;
+  }
+
+  #header .up-bar-row .login-icon {
+    background-image: url(../Images/login.jpeg);
+  }
+
+  #header .up-bar-col a {
+    color: black;
+    font-weight: bold;
+    font-size: 0.6rem;
+  }
+
+  #header .up-bar-row .icon {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.33rem;
+    border: 1px solid black;
+  }
+}
+/* ===================== */
+@media only screen and (min-width: 769px) {
+  #header .title-row {
+    background-image: url(../Images/bg1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+
+    padding: 20px 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  #header .title-row::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.9;
+    background-color: #fff;
+  }
+
+  #header .title-row * {
+    z-index: 1;
+  }
+
+  #header .title-row .logo-col {
+    background-image: url(../Images/logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 8rem;
+    height: 8rem;
+  }
+
+  #header .title-row h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    font-weight: 300;
+    line-height: 2.7rem;
+  }
+
+  #header .title-row h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 2.7rem;
+    padding-left: 1rem;
+    letter-spacing: 0.4rem;
+  }
+}
