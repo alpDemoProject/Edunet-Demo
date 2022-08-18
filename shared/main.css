@@ -26,6 +26,7 @@ html {
 img,
 video {
   width: 100%;
+  height: auto;
 }
 
 /* UTILS */
@@ -48,8 +49,10 @@ video {
   background-repeat: no-repeat;
   background-size: contain;
 
-  width: 1rem;
-  height: 1rem;
+  width: 0.3rem;
+  height: 0.3rem;
+
+  border: 1px solid black;
 }
 
 #header .up-bar-row .login-icon {
@@ -57,13 +60,12 @@ video {
 }
 
 #header .up-bar-col {
-  padding: 0.1rem 1.1rem;
+  padding: 0.3rem 1.1rem;
 }
 
 #header .up-bar-col a {
   color: black;
   font-weight: bold;
-  font-size: 0.6rem;
 }
 
 @media only screen and (min-width: 481px) {
@@ -72,6 +74,10 @@ video {
 
     max-width: 92%;
     margin: 0 auto;
+  }
+
+  #header .up-bar-col a {
+    font-size: 1rem;
   }
 
   #header .up-bar-col {
@@ -86,11 +92,10 @@ video {
     width: 1rem;
     height: 1rem;
     margin-right: 0.33rem;
-    border: 1px solid black;
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 482px) {
   #header .up-bar-row {
     justify-content: space-evenly;
   }
@@ -98,6 +103,16 @@ video {
   #header .up-bar-col {
     border-right: 1px solid var(--grey);
     border-left: 1px solid var(--grey);
+  }
+
+  #header .up-bar-col a {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  #header .up-bar-col a {
+    font-size: 0.5rem;
   }
 }
 /* ===================== */
@@ -172,7 +187,28 @@ video {
   }
 }
 
-@media only screen and (min-width: 481) {
+@media only screen and (max-width: 770px) {
+  #header .title-row .logo-col {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  #header .title-row h1 {
+    font-size: 2.3rem;
+  }
+
+  #header .title-row h2 {
+    font-size: 1.3rem;
+    letter-spacing: 0.12rem;
+  }
+
+  #header .title-row h1,
+  #header .title-row h2 {
+    line-height: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 481) {
   #header .title-row .logo-col {
     width: 4rem;
     height: 4rem;
@@ -193,7 +229,7 @@ video {
   }
 }
 
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 320px) {
   #header .title-row {
     padding: 0.5rem 0;
   }
