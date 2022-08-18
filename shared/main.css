@@ -124,8 +124,7 @@ video {
 /* ===================== */
 #header .title-row {
   background-image: url(../Images/bg1.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: 90%;
   background-position: top;
 
   border-top: 1px solid var(--grey);
@@ -335,3 +334,13 @@ video {
 }
 
 /* BODY */
+#body-a .background-row {
+  background-image: url(../Images/head-image.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  height: 90vh;
+
+  border-bottom: 4px solid var(--secondary-color);
+}
