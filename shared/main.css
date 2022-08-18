@@ -273,6 +273,10 @@ video {
   font-weight: bold;
 }
 
+#navbar .active {
+  border-bottom: 3px solid var(--secondary-color);
+}
+
 @media only screen and (min-width: 769px) {
   .nav-dot {
     width: 7px;
@@ -281,6 +285,7 @@ video {
 
   #navbar a {
     font-size: 1rem;
+    padding: 0.4rem 0;
   }
 
   #navbar .navbar-items {
@@ -301,6 +306,7 @@ video {
 
   #navbar a {
     font-size: 0.8rem;
+    padding: 0.25rem;
   }
 
   #navbar .extend {
@@ -327,3 +333,5 @@ video {
     padding: 0.1rem 0;
   }
 }
+
+/* BODY */
