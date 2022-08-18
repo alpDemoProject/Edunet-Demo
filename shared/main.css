@@ -44,6 +44,22 @@ video {
   font-family: "Montserrat Alternates", sans-serif;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.primary {
+  color: var(--primary-color);
+}
+
+.secondary {
+  color: var(--secondary-color);
+}
+
+.white {
+  color: var(--white);
+}
+
 /* HEADER */
 #header .up-bar-row {
   display: flex;
@@ -357,12 +373,15 @@ video {
 /* =================== */
 
 /* Events And Announcements */
-#events-annos .container {
+#events-annos {
+  transform: translateY(-12vh);
+}
+
+#events-annos .cards-container {
   background-color: var(--white);
   border-top: 4px solid var(--secondary-color);
-  width: 95%;
+  width: 98%;
   margin: 0 auto;
-  transform: translateY(-6vh);
 }
 
 #events-annos .cards-row {
@@ -405,7 +424,7 @@ video {
 
 @media only screen and (min-width: 769px) {
   #events-annos .cards-row {
-    padding: 3rem;
+    padding-top: 30px;
   }
 
   #events-annos .card-image {
@@ -425,7 +444,7 @@ video {
 
 @media only screen and (max-width: 770px) {
   #events-annos .cards-row {
-    padding: 20px;
+    padding-top: 20px;
     gap: 15px;
   }
 
@@ -439,7 +458,7 @@ video {
   }
 
   #events-annos .card-image {
-    flex: 1;
+    flex: 1.2;
   }
 
   #events-annos .card-content {
@@ -448,12 +467,200 @@ video {
 }
 
 @media only screen and (max-width: 482px) {
+  #events-annos .cards-row {
+    padding: 10px 2px;
+    gap: 10px;
+  }
+
   #events-annos .cards-col {
-    width: 150px;
-    height: 70px;
+    width: 100px;
+    height: 50px;
   }
 
   #events-annos .card-content {
-    font-size: 0.6rem;
+    font-size: 0.4rem;
+  }
+}
+
+#events-annos .events-annos-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#events-annos .events-annos-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#events-annos .events {
+  display: flex;
+  flex-direction: column;
+}
+
+#events-annos .event {
+  display: flex;
+  align-items: center;
+}
+
+#events-annos .event .event-date {
+  text-align: center;
+  background-image: url(../Images/date-icon.jpeg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  flex: 1;
+}
+
+#events-annos .event-content {
+  flex: 5;
+}
+
+@media only screen and (min-width: 769px) {
+  #events-annos .title {
+    font-size: 2.5rem;
+    padding: 0 40px;
+  }
+
+  #events-annos .events {
+    gap: 20px;
+  }
+
+  #events-annos .events-annos-row {
+    gap: 20px;
+    padding: 30px 30px;
+  }
+
+  #events-annos .event .event-date h2 {
+    font-size: 1.2rem;
+  }
+
+  #events-annos .event .event-date h3 {
+    font-size: 0.7rem;
+  }
+
+  #events-annos .event .event-date h2,
+  #events-annos .event .event-date h3 {
+    line-height: 0.8rem;
+  }
+
+  #events-annos .event .event-date {
+    width: 4rem;
+    height: 3rem;
+  }
+
+  #events-annos .event {
+    gap: 40px;
+  }
+
+  #events-annos .event .event-content h2 {
+    font-size: 1.2rem;
+  }
+
+  #events-annos .event-content p {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  #events-annos .title {
+    font-size: 1.7rem;
+    padding: 0 20px;
+  }
+
+  #events-annos .events {
+    gap: 20px;
+  }
+
+  #events-annos .events-annos-row {
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  #events-annos .event .event-date h2 {
+    font-size: 0.9rem;
+  }
+
+  #events-annos .event .event-date h3 {
+    font-size: 0.5rem;
+  }
+
+  #events-annos .event .event-date h2,
+  #events-annos .event .event-date h3 {
+    line-height: 0.6rem;
+  }
+
+  #events-annos .event .event-date {
+    width: 3.5rem;
+    height: 2.5rem;
+  }
+
+  #events-annos .event {
+    gap: 10px;
+  }
+
+  #events-annos .event .event-content h2 {
+    font-size: 1rem;
+  }
+
+  #events-annos .event-content p {
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  #events-annos .title {
+    font-size: 1.2rem;
+    padding: 0 10px;
+  }
+
+  #events-annos .events {
+    gap: 15px;
+  }
+
+  #events-annos .events-annos-row {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0;
+  }
+
+  #events-annos .event .event-date h2 {
+    font-size: 0.7rem;
+  }
+
+  #events-annos .event .event-date h3 {
+    font-size: 0.4rem;
+  }
+
+  #events-annos .event .event-date h2,
+  #events-annos .event .event-date h3 {
+    line-height: 0.6rem;
+  }
+
+  #events-annos .event .event-date {
+    width: 3rem;
+    height: 2rem;
+  }
+
+  #events-annos .event {
+    gap: 10px;
+  }
+
+  #events-annos .event .event-content h2 {
+    font-size: 0.8rem;
+  }
+
+  #events-annos .event-content p {
+    font-size: 0.55rem;
+    font-weight: bold;
   }
 }
