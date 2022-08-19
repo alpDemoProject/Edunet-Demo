@@ -106,17 +106,25 @@ video {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-
-  width: 20px;
-  height: 20px;
 }
 
 #header .up-bar-row .login-icon {
   background-image: url(../Images/login.jpeg);
 }
+#header .up-bar-row .translate-icon {
+  background-image: url(../Images/translate.jpeg);
+}
+#header .up-bar-row .search-icon {
+  background-image: url(../Images/search.jpeg);
+}
+#header .up-bar-row .social-icon {
+  background-image: url(../Images/facebook.jpeg);
+}
 
 #header .up-bar-col {
   padding: 0.3rem 1.1rem;
+  display: flex;
+  align-items: center;
 }
 
 #header .up-bar-col a {
@@ -133,7 +141,7 @@ video {
   }
 
   #header .up-bar-col a {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   #header .up-bar-col {
@@ -145,8 +153,8 @@ video {
   }
 
   #header .up-bar-row .icon {
-    width: 1rem;
-    height: 1rem;
+    width: 1.2rem;
+    height: 1.2rem;
     margin-right: 0.33rem;
   }
 }
@@ -162,13 +170,25 @@ video {
   }
 
   #header .up-bar-col a {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
+  }
+
+  #header .up-bar-row .icon {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.33rem;
   }
 }
 
 @media only screen and (max-width: 321px) {
   #header .up-bar-col a {
-    font-size: 0.5rem;
+    font-size: 0.4rem;
+  }
+
+  #header .up-bar-row .icon {
+    width: 0.9rem;
+    height: 0.9rem;
+    margin-right: 0.33rem;
   }
 }
 /* ===================== */
