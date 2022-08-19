@@ -1244,7 +1244,7 @@ html {
 /*=========================*/
 /* FOOTER */
 #footer-a {
-  padding-top: 5vh;
+  padding: 3vh 0;
 }
 
 #footer-a .row {
@@ -1351,7 +1351,7 @@ html {
 @media only screen and (max-width: 1026px) {
   #footer-a .row {
     flex-direction: column;
-    gap: 6vh;
+    gap: 10vh;
     align-items: unset;
     padding: 2vh;
   }
@@ -1556,5 +1556,39 @@ html {
 
   #footer-a .contact-col p {
     font-size: 0.5rem;
+  }
+}
+
+#footer-b .row {
+  padding: 1vh 2vw;
+  text-align: center;
+}
+
+#footer-b .end-row {
+  background-color: var(--grey);
+}
+
+#footer-b .end-row h3 {
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 769px) {
+  #footer-b .row p,
+  #footer-b .row h3 {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 482px) {
+  #footer-b .row p,
+  #footer-b .row h3 {
+    font-size: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  #footer-b .row p,
+  #footer-b .row h3 {
+    font-size: 0.4rem;
   }
 }
