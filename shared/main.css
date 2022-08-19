@@ -355,7 +355,7 @@ html {
     padding: 0.6rem 0;
   }
 
-  #navbar .more {
+  #navbar .more-dot {
     visibility: hidden;
     display: none;
   }
@@ -378,22 +378,23 @@ html {
   }
 
   #navbar .navbar-items {
-    padding: 0;
+    padding: 0.4rem 0;
   }
 }
 
 @media only screen and (max-width: 321px) {
   .nav-dot {
-    width: 3px;
-    height: 3px;
+    width: 4px;
+    height: 4px;
   }
 
   #navbar a {
     font-size: 0.5rem;
+    padding: 0.15rem 0;
   }
 
   #navbar .navbar-items {
-    padding: 0;
+    padding: 0.1rem 0;
   }
 }
 
