@@ -60,6 +60,42 @@ video {
   color: var(--white);
 }
 
+.more-button {
+  color: var(--primary-color);
+}
+
+.more-button h2 {
+  font-weight: bold;
+}
+
+.more-button span {
+  color: var(--secondary-color);
+}
+
+.more {
+  display: flex;
+  padding: 2vh;
+  gap: 2vw;
+}
+
+@media only screen and (min-width: 769px) {
+  .more-button h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .more-button h2 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .more-button h2 {
+    font-size: 0.8rem;
+  }
+}
+
 /* HEADER */
 #header .up-bar-row {
   display: flex;
@@ -377,7 +413,7 @@ video {
   transform: translateY(-12vh);
 }
 
-#events-annos .cards-container {
+#events-annos .big-container {
   background-color: var(--white);
   border-top: 4px solid var(--secondary-color);
   width: 98%;
@@ -485,6 +521,7 @@ video {
 #events-annos .events-annos-row {
   display: flex;
   flex-wrap: wrap;
+  padding: 5vh 5vw;
 }
 
 #events-annos .events-annos-col {
@@ -575,19 +612,16 @@ video {
 
   #events-annos .events-annos-row {
     gap: 60px;
-    padding: 30px 30px;
+    padding: 5vh 2vw;
   }
 
   #events-annos .event .event-date h2 {
     font-size: 1.2rem;
+    line-height: 0.8rem;
   }
 
   #events-annos .event .event-date h3 {
     font-size: 0.7rem;
-  }
-
-  #events-annos .event .event-date h2 {
-    line-height: 0.8rem;
   }
 
   #events-annos .event .event-date {
@@ -645,7 +679,6 @@ video {
 
   #events-annos .events-annos-row {
     flex-direction: column;
-    padding: 5vh 10vw;
     gap: 20px;
   }
 
@@ -719,7 +752,6 @@ video {
   #events-annos .events-annos-row {
     flex-direction: column;
     gap: 20px;
-    padding: 5vh 10vw;
   }
 
   #events-annos .event .event-date h2 {
